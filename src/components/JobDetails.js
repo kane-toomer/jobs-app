@@ -82,7 +82,7 @@ const JobDetails = () => {
 							</div>
 						</div>
 					</div>
-					<div className="mt-5 flex lg:mt-0 lg:ml-4">
+					{/* <div className="mt-5 flex lg:mt-0 lg:ml-4">
 						<span className="ml-3 hidden lg:block">
 							<button
 								type="button"
@@ -95,7 +95,7 @@ const JobDetails = () => {
 								Save
 							</button>
 						</span>
-					</div>
+					</div> */}
 				</div>
 				<div className="mt-20">
 					<p className="text-xl font-bold underline mb-5">Job Description</p>

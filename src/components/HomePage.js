@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import _ from "lodash";
+import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { initiateGetJobs } from "../actions/jobs";
 import { resetErrors } from "../actions/errors";
-import Search from "./Search";
-import Results from "./Results";
 import JobDetails from "./JobDetails";
 import JobsContext from "../context/jobs";
+import Header from "./Header";
 
 const HomePage = (props) => {
 	const [results, setResults] = useState([]);
@@ -78,35 +78,42 @@ const HomePage = (props) => {
 	return (
 		<JobsContext.Provider value={value}>
 			<div className={`${page === "details" && "hide"}`}>
-				<Search />
+				<Header />
 				{!_.isEmpty(errors) && (
-					<div className="errorMsg">
+					<div className="">
 						<p>{errors.error}</p>
 					</div>
 				)}
-				<Results />
-				{isLoading && (
-					<p className="text-center mb-20 text-xl font-bold">Loading...</p>
-				)}
-				{results.length > 0 && _.isEmpty(errors) && (
-					<div className="flex justify-center">
-						<div
-							className="text-center bg-indigo-500 w-40 py-3 rounded-md text-white font-medium mb-20"
-							onClick={isLoading ? null : handleLoadMore}>
-							<button
-								disabled={isLoading}
-								className={`${isLoading ? "disabled" : ""}`}>
-								Load More Jobs
-							</button>
+				<div className="">
+					{/* <Results /> */}
+					{isLoading && (
+						<p className="text-center mb-20 text-xl font-bold">Loading...</p>
+					)}
+					{results.length > 0 && _.isEmpty(errors) && (
+						<div className="flex justify-center">
+							<div
+								className="text-center bg-indigo-500 w-40 py-3 rounded-md text-white font-medium mb-20"
+								onClick={isLoading ? null : handleLoadMore}>
+								<button
+									disabled={isLoading}
+									className={`${isLoading ? "disabled" : ""}`}>
+									Load More Jobs
+								</button>
+							</div>
 						</div>
-					</div>
-				)}
+					)}
+				</div>
 			</div>
 			<div className={`${page === "home" && "hide"}`}>
 				{page === "details" && <JobDetails />}
 			</div>
 		</JobsContext.Provider>
 	);
+};
+
+HomePage.propTypes = {
+	jobs: PropTypes.array.isRequired,
+	errors: PropTypes.object,
 };
 
 const mapStateToProps = (state) => ({

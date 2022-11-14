@@ -27,12 +27,12 @@ const Search = () => {
 	};
 
 	return (
-		<div className="mx-auto max-w-full px-4 sm:px-6 lg:px-8 bg-gray-300 pt-10">
+		<div className="mx-auto max-w-full px-4 sm:px-6 lg:px-8 pt-10">
 			<form onSubmit={handleSearch}>
 				<div className="grid grid-flow-row pb-5">
 					<div className="flex flex-row gap-5 ">
 						{/* SEARCH TERM */}
-						<div className="h-11 w-4/12 flex rounded-md shadow-sm">
+						<div className="h-11 w-full flex rounded-md shadow-sm">
 							<span className="inline-flex items-center rounded-l-md border border-r-0 border-gray-300 bg-gray-50 px-3 text-sm text-gray-500">
 								<MagnifyingGlassIcon
 									className="block h-6 w-6"
@@ -51,7 +51,7 @@ const Search = () => {
 						</div>
 
 						{/* LOCATION */}
-						<div className="h-11 w-4/12 flex rounded-md shadow-sm">
+						<div className="h-11 w-full flex rounded-md shadow-sm">
 							<span className="inline-flex items-center rounded-l-md border border-r-0 border-gray-300 bg-gray-50 px-3 text-sm text-gray-500">
 								<MapPinIcon className="block h-6 w-6" aria-hidden="true" />
 							</span>
@@ -67,7 +67,7 @@ const Search = () => {
 						</div>
 
 						{/* SEARCH BUTTON */}
-						<div className="px-2 text-right">
+						<div className="px-2 text-right hidden md:block">
 							<button
 								type="submit"
 								className="h-11 inline-flex justify-center items-center rounded-md border border-transparent bg-indigo-600 py-2 px-5 text-md font-md text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
@@ -91,6 +91,15 @@ const Search = () => {
 								Full Time
 							</label>
 						</div>
+					</div>
+
+					{/* SEARCH BUTTON #2 */}
+					<div className="px-2 text-right md:hidden">
+						<button
+							type="submit"
+							className="h-11 w-full mt-10 inline-flex justify-center items-center rounded-md border border-transparent bg-indigo-600 py-2 px-5 text-md font-md text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+							Search
+						</button>
 					</div>
 				</div>
 			</form>

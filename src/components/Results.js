@@ -5,7 +5,7 @@ import JobItem from "./JobsCell";
 const Results = () => {
 	const { results } = useContext(JobsContext);
 	return (
-		<div className="mb-20">
+		<div className="">
 			{results.map((job, index) => (
 				<JobItem key={job.id} {...job} index={index} />
 			))}

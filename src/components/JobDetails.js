@@ -2,10 +2,8 @@ import React, { useContext, useEffect } from "react";
 import JobsContext from "../context/jobs";
 
 import {
-	ArrowLongLeftIcon,
 	BriefcaseIcon,
 	BuildingOffice2Icon,
-	HeartIcon,
 	LinkIcon,
 	MapPinIcon,
 } from "@heroicons/react/20/solid";

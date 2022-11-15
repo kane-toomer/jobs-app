@@ -1,1 +1,1 @@
-export const BASE_API_URL = "http://localhost:3001/jobs";
+export const BASE_API_URL = "";

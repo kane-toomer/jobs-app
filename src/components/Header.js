@@ -5,6 +5,8 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Search from "./Search";
 import Results from "./Results";
 
+import logo from "../assets/images/mememoji2.svg";
+
 const navigation = [
 	{ name: "Portfolio", href: "https://kanetoomer.com" },
 	{ name: "Github", href: "https://github.com/kane-toomer" },
@@ -73,12 +75,9 @@ const Header = () => {
 						aria-label="Global">
 						<div className="flex lg:min-w-0 lg:flex-1" aria-label="Global">
 							<a href="#" className="-m-1.5 p-1.5">
-								<span className="sr-only">Your Company</span>
-								<img
-									className="h-8"
-									src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-									alt=""
-								/>
+								<a href="#" className="-m-1.5 p-1.5">
+									<img className="block h-20 w-auto" src={logo} alt="my logo" />
+								</a>
 							</a>
 						</div>
 						<div className="flex lg:hidden">
@@ -115,11 +114,10 @@ const Header = () => {
 							<div className="flex h-9 items-center justify-between">
 								<div className="flex">
 									<a href="#" className="-m-1.5 p-1.5">
-										<span className="sr-only">Your Company</span>
 										<img
-											className="h-8"
-											src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-											alt=""
+											className="block h-14 w-auto"
+											src={logo}
+											alt="my logo"
 										/>
 									</a>
 								</div>

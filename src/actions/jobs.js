@@ -17,7 +17,7 @@ export const initiateGetJobs = (data) => {
 			}
 
 			const jobs = await axios.get(
-				`${BASE_API_URL}/.netlify/functions/jobs?description=${description}&location=${location}${full_time}${page}`
+				`${BASE_API_URL}?description=${description}&location=${location}${full_time}${page}`
 			);
 			const sortedJobs = jobs.data.sort(
 				(a, b) =>

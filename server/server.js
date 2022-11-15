@@ -1,15 +1,13 @@
 const path = require("path");
 const axios = require("axios");
-const serverless = require("serverless-http");
+const cors = require("cors");
 const express = require("express");
-
-const router = express.Router();
-
 const app = express();
-
+const PORT = process.env.PORT || 3001;
 const buildPath = path.join(__dirname, "..", "build");
 
 app.use(express.static(buildPath));
+app.use(cors());
 
 app.get("/jobs", async (req, res) => {
 	try {
@@ -31,7 +29,6 @@ app.get("/jobs", async (req, res) => {
 	}
 });
 
-app.use("/.netlify/functions/server", router);
-
-module.exports = app;
-module.exports.handler = serverless(app);
+app.listen(PORT, () => {
+	console.log(`server started on port ${PORT}`);
+});

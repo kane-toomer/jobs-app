@@ -1,4 +1,3 @@
 [build]
- command="npm install && npm run build && npm run server-build"
- publish="build"
- functions="lambda"
+ functions="lambdas"
+ command="npm install && npm run build"

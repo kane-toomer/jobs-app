@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import logo from "../assets/images/mememoji2.svg";
 
 import Search from "./Search";
 import Results from "./Results";
@@ -74,7 +73,12 @@ const Header = () => {
 						aria-label="Global">
 						<div className="flex lg:min-w-0 lg:flex-1" aria-label="Global">
 							<a href="#" className="-m-1.5 p-1.5">
-								<img className="block h-20 w-auto" src={logo} alt="my logo" />
+								<span className="sr-only">Your Company</span>
+								<img
+									className="h-8"
+									src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+									alt=""
+								/>
 							</a>
 						</div>
 						<div className="flex lg:hidden">
@@ -111,10 +115,11 @@ const Header = () => {
 							<div className="flex h-9 items-center justify-between">
 								<div className="flex">
 									<a href="#" className="-m-1.5 p-1.5">
+										<span className="sr-only">Your Company</span>
 										<img
-											className="block h-14 w-auto"
-											src={logo}
-											alt="my logo"
+											className="h-8"
+											src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+											alt=""
 										/>
 									</a>
 								</div>

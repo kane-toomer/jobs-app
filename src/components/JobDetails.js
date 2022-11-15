@@ -30,6 +30,9 @@ const JobDetails = () => {
 				<div className="lg:flex lg:items-center lg:justify-between">
 					<div className="min-w-0 flex-1">
 						<div>
+							{/* <span className="inline-block h-16 w-16 overflow-hidden rounded-full bg-gray-100">
+								<img src={company_logo} alt={company} />
+							</span> */}
 							<h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:tracking-tight mb-3">
 								{title}
 							</h2>
@@ -65,6 +68,20 @@ const JobDetails = () => {
 							</div>
 						</div>
 					</div>
+					{/* <div className="mt-5 flex lg:mt-0 lg:ml-4">
+						<span className="ml-3 hidden lg:block">
+							<button
+								type="button"
+								className="inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm 
+                                hover:bg-red-500 hover:text-white hover:border-none">
+								<HeartIcon
+									className="-ml-1 mr-2 h-5 w-5 hover:text-white"
+									aria-hidden="true"
+								/>
+								Save
+							</button>
+						</span>
+					</div> */}
 				</div>
 				<div className="mt-20">
 					<p className="text-xl font-bold underline mb-5">Job Description</p>
@@ -73,6 +90,19 @@ const JobDetails = () => {
 				<div className="mt-20">
 					<p className="text-xl font-bold underline mb-5">How to Apply</p>
 					<div dangerouslySetInnerHTML={{ __html: how_to_apply }}></div>
+				</div>
+				<div className="mt-10 flex lg:ml-4">
+					<span className="ml-auto lg:hidden mr-5">
+						<button
+							type="button"
+							className="inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-4 text-sm font-medium text-gray-700 shadow-sm hover:bg-red-500 hover:text-white hover:border-none">
+							<HeartIcon
+								className="-ml-1 mr-2 h-5 w-5 hover:text-white"
+								aria-hidden="true"
+							/>
+							Save
+						</button>
+					</span>
 				</div>
 			</div>
 		</div>

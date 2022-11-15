@@ -82,7 +82,7 @@ const HomePage = (props) => {
 
 	return (
 		<JobsContext.Provider value={value}>
-			<div className={`${page === "details" && "hide"}`}>
+			<div>
 				<Header />
 				{!_.isEmpty(errors) && (
 					<div className="">
@@ -109,9 +109,8 @@ const HomePage = (props) => {
 					)}
 				</div>
 			</div>
-			{/* <div className={`${page === "home" && "hide"}`}>
-				{page === "details" && <JobDetails />}
-			</div> */}
+
+			{/* MODAL */}
 			<Transition.Root show={open} as={Fragment}>
 				<Dialog
 					as="div"

@@ -5,10 +5,6 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Search from "./Search";
 import Results from "./Results";
 
-function classNames(...classes) {
-	return classes.filter(Boolean).join(" ");
-}
-
 const navigation = [
 	{ name: "Portfolio", href: "https://kanetoomer.com" },
 	{ name: "Github", href: "https://github.com/kane-toomer" },
@@ -190,7 +186,7 @@ const Header = () => {
 									<span>
 										<a
 											href="https://kane-toomer.github.io/Data/jobs.json"
-											className="text-indigo-600 font-medium">
+											className="text-indigo-600 font-medium hover:underline">
 											kane-toomer.github.io/Data/jobs.json
 										</a>
 									</span>

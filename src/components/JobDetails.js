@@ -11,7 +11,7 @@ import {
 } from "@heroicons/react/20/solid";
 
 const JobDetails = () => {
-	const { details, onResetPage } = useContext(JobsContext);
+	const { details } = useContext(JobsContext);
 	const {
 		type,
 		title,
@@ -29,18 +29,6 @@ const JobDetails = () => {
 	return (
 		<div className="mx-auto max-w-5xl px-2 sm:px-6 lg:px-10 mt-10">
 			<div className="bg-gray-50 px-10 py-5 rounded-md">
-				<div className="mb-10">
-					<a
-						href="/#"
-						className="flex items-center text-gray-600"
-						onClick={onResetPage}>
-						<ArrowLongLeftIcon
-							className="mr-2 h-5 w-5 flex-shrink-0"
-							aria-hidden="true"
-						/>
-						Back
-					</a>
-				</div>
 				<div className="lg:flex lg:items-center lg:justify-between">
 					<div className="min-w-0 flex-1">
 						<div>

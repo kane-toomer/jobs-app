@@ -6,6 +6,7 @@ const express = require("express");
 const router = express.Router();
 
 const app = express();
+
 const buildPath = path.join(__dirname, "..", "build");
 
 app.use(express.static(buildPath));
